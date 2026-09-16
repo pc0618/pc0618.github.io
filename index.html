@@ -18,6 +18,7 @@
   <link rel="canonical" href="https://pc0618.github.io/">
   <link rel="icon" href="assets/pranshu.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <script src="publications.js" defer></script>
   <title>Pranshu Chaturvedi</title>
 </head>
 <body>
@@ -36,7 +37,6 @@
         <div class="intro-copy">
           <p class="eyebrow">Machine learning &amp; systems</p>
           <h1 id="name">Pranshu<br>Chaturvedi</h1>
-          <p class="lead">Making learning and inference<br class="desktop-break"> more efficient.</p>
           <div class="social-links" aria-label="Find me online">
             <a href="mailto:pranshu@stanford.edu">Email ↗</a>
             <a href="https://github.com/pc0618">GitHub ↗</a>
@@ -46,16 +46,19 @@
         <img class="portrait" src="assets/pranshu.png" alt="Pranshu Chaturvedi" width="1254" height="1254" fetchpriority="high">
       </section>
       <div class="bio">
-        <p>I work on <strong>efficient machine learning</strong>, with a focus on diffusion language models, distributed training, and inference. I’m interested in how model design and systems design can work together to make learning more practical at scale.</p>
-        <p>My research also spans federated learning, relational data, and AI for scientific computing.</p>
+        <p>Hi there! I recently graduated from Stanford University with a fully funded master’s in Computer Science (AI concentration) and Distinction in Research. Advised by <a href="https://cs.stanford.edu/~pliang/">Percy Liang</a>, I worked on the <a href="https://marin.community/">Marin project</a>, an open-development lab training frontier open-source language models.</p>
+        <p>I’ve also worked on diffusion language models (<a href="#block-diffusion-hybrids">block diffusion hybrids</a> and <a href="#block-parallelism">block parallelism</a>), <a href="#fedcompass">federated learning</a>, <a href="#relbench">data for relational foundation models</a>, and AI in biomedicine at Argonne National Laboratory, including <a href="#biomed-appflx">secure biomedical collaboration</a> and <a href="#appflx">privacy-preserving federated learning</a>.</p>
       </div>
       <section id="publications" aria-labelledby="publications-heading">
         <div class="section-heading">
-          <h2 id="publications-heading">Selected publications</h2>
-          <span>Papers &amp; ongoing work</span>
+          <h2 id="publications-heading">Publications</h2>
+          <div id="publication-filter" role="group" aria-label="Publication view" hidden>
+            <button type="button" data-view="selected" aria-pressed="true" aria-controls="publication-list">Selected</button>
+            <button type="button" data-view="all" aria-pressed="false" aria-controls="publication-list">All publications</button>
+          </div>
         </div>
-        <div class="publication-list">
-          <article class="publication">
+        <div class="publication-list" id="publication-list">
+          <article class="publication" id="block-parallelism">
             <div class="year">2026</div>
             <div>
               <p class="venue">In preparation</p>
@@ -65,7 +68,7 @@
               <p class="description">Manuscript in preparation. Details coming soon.</p>
             </div>
           </article>
-          <article class="publication">
+          <article class="publication" id="block-diffusion-hybrids">
             <div class="year">2026</div>
             <div>
               <p class="venue">COLM · Non-AR Workshop</p>
@@ -75,7 +78,7 @@
               <div class="paper-links"><a href="https://arxiv.org/abs/2607.02805">Paper ↗</a><a href="https://arxiv.org/pdf/2607.02805">PDF ↗</a></div>
             </div>
           </article>
-          <article class="publication">
+          <article class="publication" id="relbench">
             <div class="year">2026</div>
             <div>
               <p class="venue">ICLR · DATA-FM Workshop</p>
@@ -85,7 +88,16 @@
               <div class="paper-links"><a href="https://arxiv.org/abs/2602.12606">Paper ↗</a><a href="https://github.com/stanford-star/relbench">Code ↗</a><a href="https://relbench.stanford.edu/">Project ↗</a></div>
             </div>
           </article>
-          <article class="publication">
+          <article class="publication additional" id="biomed-appflx">
+            <div class="year">2025</div>
+            <div>
+              <p class="venue">Computational and Structural Biotechnology Journal</p>
+              <h3><a href="https://doi.org/10.1016/j.csbj.2024.12.001">Enabling End-to-End Secure Federated Learning in Biomedical Research on Heterogeneous Computing Environments with APPFLx</a></h3>
+              <p class="authors">Trung-Hieu Hoang, Jordan Fuhrman, M. Klarqvist, Miao Li, <strong>Pranshu Chaturvedi</strong>, Zilinghan Li, Kibaek Kim, Minseok Ryu, Ryan Chard, E. A. Huerta, Maryellen Giger, Ravi Madduri</p>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.csbj.2024.12.001">Paper ↗</a><a href="https://arxiv.org/abs/2312.08701">arXiv ↗</a></div>
+            </div>
+          </article>
+          <article class="publication" id="fedcompass">
             <div class="year">2024</div>
             <div>
               <p class="venue">ICLR</p>
@@ -95,7 +107,25 @@
               <div class="paper-links"><a href="https://openreview.net/forum?id=msXxrttLOi">Paper ↗</a><a href="https://arxiv.org/abs/2309.14675">arXiv ↗</a><a href="https://github.com/APPFL/APPFL">Code ↗</a></div>
             </div>
           </article>
-          <article class="publication">
+          <article class="publication additional" id="federated-llama">
+            <div class="year">2024</div>
+            <div>
+              <p class="venue">IEEE Computing in Science &amp; Engineering</p>
+              <h3><a href="https://doi.org/10.1109/MCSE.2024.3382583">Secure Federated Learning Across Heterogeneous Cloud and High-Performance Computing Resources: A Case Study on Federated Fine-Tuning of LLaMA 2</a></h3>
+              <p class="authors">Zilinghan Li, Shilan He, <strong>Pranshu Chaturvedi</strong>, Volodymyr Kindratenko, E. A. Huerta, Kibaek Kim, Ravi Madduri</p>
+              <div class="paper-links"><a href="https://doi.org/10.1109/MCSE.2024.3382583">Paper ↗</a><a href="https://arxiv.org/abs/2402.12271">arXiv ↗</a></div>
+            </div>
+          </article>
+          <article class="publication additional" id="appflx">
+            <div class="year">2023</div>
+            <div>
+              <p class="venue">IEEE e-Science</p>
+              <h3><a href="https://arxiv.org/abs/2308.08786">APPFLx: Providing Privacy-Preserving Cross-Silo Federated Learning as a Service</a></h3>
+              <p class="authors">Zilinghan Li, Shilan He, <strong>Pranshu Chaturvedi</strong>, Trung-Hieu Hoang, Minseok Ryu, E. A. Huerta, Volodymyr Kindratenko, Jordan Fuhrman, Maryellen Giger, Ryan Chard, Kibaek Kim, Ravi Madduri</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2308.08786">Paper ↗</a><a href="https://appfl.ai/">Project ↗</a></div>
+            </div>
+          </article>
+          <article class="publication" id="fair-ai">
             <div class="year">2022</div>
             <div>
               <p class="venue">Scientific Data · Nature Portfolio</p>
@@ -104,7 +134,7 @@
               <div class="paper-links"><a href="https://www.nature.com/articles/s41597-022-01712-9">Paper ↗</a><a href="https://arxiv.org/abs/2207.00611">arXiv ↗</a></div>
             </div>
           </article>
-          <article class="publication">
+          <article class="publication" id="gravitational-waves">
             <div class="year">2022</div>
             <div>
               <p class="venue">Frontiers in Artificial Intelligence</p>

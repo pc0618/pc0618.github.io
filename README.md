@@ -2,17 +2,19 @@
 
 Personal website: https://pc0618.github.io/
 
-Plain HTML and CSS, served by GitHub Pages from `main` at `/`.
+Plain HTML, CSS, and JavaScript, served by GitHub Pages from `main` at `/`.
 No dependencies, build step, tracking, or third-party scripts.
 
 ## Editing
 
 - Biography, links, and publications: `index.html`
 - Layout, mobile styles, and automatic dark mode: `style.css`
+- Selected / All publications toggle: `publications.js` (all entries remain visible without JavaScript)
 - Portrait: `assets/pranshu.png`
 
 Preview with `python3 -m http.server 8765 --bind 127.0.0.1`.
-Run `python3 check_site.py` before publishing. Pushes to `main` deploy automatically.
+Run `python3 check_site.py` and `node check_publications.cjs` before publishing.
+Pushes to `main` deploy automatically.
 
 ## Content provenance
 
@@ -25,6 +27,9 @@ ICLR 2026 DATA-FM workshop, and Frontiers in AI papers, as requested by the auth
 The block-parallelism entry is an in-preparation placeholder with the author-supplied
 title and author list. Pranshu is displayed first; the first three authors are marked
 as equal contributors.
+The full list also includes three APPFL-related papers, including biomedical work
+at Argonne. Biography details were supplied by the author. Biography links to
+full-list-only papers automatically reveal those entries.
 
 Google Scholar profile could not be identified automatically. Add the confirmed
 profile link when available and reconcile any additional publications.

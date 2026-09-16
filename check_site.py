@@ -11,6 +11,7 @@ class SiteParser(HTMLParser):
         super().__init__()
         self.ids, self.links, self.meta, self.headings = set(), [], {}, []
         self.publications = 0
+        self.additional = 0
 
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
@@ -21,6 +22,7 @@ class SiteParser(HTMLParser):
             self.headings.append(tag)
         if tag == "article":
             self.publications += 1
+            self.additional += "additional" in attrs.get("class", "").split()
         if tag == "img":
             assert attrs.get("alt") and attrs.get("width") and attrs.get("height")
         if tag == "meta":
@@ -33,11 +35,13 @@ if __name__ == "__main__":
     html = (ROOT / "index.html").read_text()
     site.feed(html)
     assert site.headings.count("h1") == 1
-    assert site.publications == 6  # Five selected papers and one in-preparation placeholder.
+    assert site.publications == 9 and site.additional == 3  # Six selected, nine in all.
     assert "<h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>" in html
     assert '<strong>Pranshu Chaturvedi</strong><sup>∗</sup>, Tarun Suresh<sup>∗</sup>, Hangoo Kang<sup>∗</sup>, Parth Shroff, Ishan S. Khare, Hermann Kumbong, Azalia Mirhoseini' in html
     assert "In preparation" in html and "Equal contribution." in html
-    assert "APPFLx" not in html and "Federated Fine-Tuning of LLaMA 2" not in html
+    assert "Hi there!" in html and "Distinction in Research" in html
+    assert 'src="publications.js" defer' in html
+    assert 'data-view="selected"' in html and 'data-view="all"' in html
     for link in site.links:
         url = urlsplit(link)
         if not url.scheme and not url.netloc:
