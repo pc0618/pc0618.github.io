@@ -30,9 +30,12 @@ class SiteParser(HTMLParser):
 
 if __name__ == "__main__":
     site = SiteParser()
-    site.feed((ROOT / "index.html").read_text())
+    html = (ROOT / "index.html").read_text()
+    site.feed(html)
     assert site.headings.count("h1") == 1
-    assert site.publications == 8
+    assert site.publications == 6  # Five selected papers and one in-preparation placeholder.
+    assert "Sharded-Context Block Parallelism" in html and "In preparation" in html
+    assert "APPFLx" not in html and "Federated Fine-Tuning of LLaMA 2" not in html
     for link in site.links:
         url = urlsplit(link)
         if not url.scheme and not url.netloc:

@@ -20,8 +20,9 @@ Publication metadata checked on September 16, 2026 against the linked papers,
 [APPFL's publication list](https://appfl.ai/en/latest/publication/index.html),
 [Stanford STAR](https://star-project.stanford.edu/publications/), and
 [Argonne's publication records](https://www.alcf.anl.gov/publications).
-The biomedical APPFLx paper uses its 2025 journal-volume year; it appeared online
-in December 2024. Journal and preprint author lists differ; the journal list is shown.
+The selected list retains the COLM workshop, Scientific Data, ICLR 2024,
+ICLR 2026 DATA-FM workshop, and Frontiers in AI papers, as requested by the author.
+The block-parallelism entry is an in-preparation placeholder using the draft title.
 
 Google Scholar profile could not be identified automatically. Add the confirmed
 profile link when available and reconcile any additional publications.
