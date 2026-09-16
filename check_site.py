@@ -34,7 +34,9 @@ if __name__ == "__main__":
     site.feed(html)
     assert site.headings.count("h1") == 1
     assert site.publications == 6  # Five selected papers and one in-preparation placeholder.
-    assert "Sharded-Context Block Parallelism" in html and "In preparation" in html
+    assert "<h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>" in html
+    assert '<strong>Pranshu Chaturvedi</strong><sup>∗</sup>, Tarun Suresh<sup>∗</sup>, Hangoo Kang<sup>∗</sup>, Parth Shroff, Ishan S. Khare, Hermann Kumbong, Azalia Mirhoseini' in html
+    assert "In preparation" in html and "Equal contribution." in html
     assert "APPFLx" not in html and "Federated Fine-Tuning of LLaMA 2" not in html
     for link in site.links:
         url = urlsplit(link)
