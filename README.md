@@ -24,9 +24,11 @@ Publication metadata checked on September 16, 2026 against the linked papers,
 [Argonne's publication records](https://www.alcf.anl.gov/publications).
 The selected list retains the COLM workshop, Scientific Data, ICLR 2024,
 ICLR 2026 DATA-FM workshop, and Frontiers in AI papers, as requested by the author.
-The block-parallelism entry is an in-preparation placeholder with the author-supplied
-title and author list. Pranshu is displayed first; the first three authors are marked
-as equal contributors.
+The block-parallelism entry uses the author-supplied title and author list.
+Pranshu is displayed first; the first three authors are marked as equal contributors.
+Block Parallelism and Training Hybrid Block Diffusion Language Models are listed
+as under review at ICLR 2027, as supplied by the author; the hybrid paper retains
+its COLM workshop venue.
 The full list also includes three APPFL-related papers, including biomedical work
 at Argonne. Biography details were supplied by the author. Biography links to
 full-list-only papers automatically reveal those entries.

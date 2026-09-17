@@ -38,7 +38,7 @@ if __name__ == "__main__":
     assert site.publications == 9 and site.additional == 3  # Six selected, nine in all.
     assert "<h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>" in html
     assert '<strong>Pranshu Chaturvedi</strong><sup>∗</sup>, Tarun Suresh<sup>∗</sup>, Hangoo Kang<sup>∗</sup>, Parth Shroff, Ishan S. Khare, Hermann Kumbong, Azalia Mirhoseini' in html
-    assert "In preparation" in html and "Equal contribution." in html
+    assert html.count("Under review at ICLR 2027") == 2 and "Equal contribution." in html
     assert "Hi there!" in html and "Distinction in Research" in html
     assert 'src="publications.js" defer' in html
     assert 'data-view="selected"' in html and 'data-view="all"' in html
