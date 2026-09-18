@@ -36,7 +36,8 @@ if __name__ == "__main__":
     site.feed(html)
     assert site.headings.count("h1") == 1
     assert site.publications == 9 and site.additional == 3  # Six selected, nine in all.
-    assert "<h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>" in html
+    assert '<h3><a href="https://arxiv.org/abs/2609.19242">Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</a></h3>' in html
+    assert 'href="https://arxiv.org/pdf/2609.19242"' in html
     assert '<strong>Pranshu Chaturvedi</strong><sup>∗</sup>, Tarun Suresh<sup>∗</sup>, Hangoo Kang<sup>∗</sup>, Parth Shroff, Ishan S. Khare, Hermann Kumbong, Azalia Mirhoseini' in html
     assert html.count("Under review at ICLR 2027") == 2 and "Equal contribution." in html
     assert "Hi there!" in html and "Distinction in Research" in html
