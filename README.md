@@ -29,6 +29,8 @@ Pranshu is displayed first; the first three authors are marked as equal contribu
 Block Parallelism and Training Hybrid Block Diffusion Language Models are listed
 as under review at ICLR 2027, as supplied by the author; the hybrid paper retains
 its COLM workshop venue.
+Block Parallelism also lists the LCFM and DiffuLM workshops at NeurIPS 2026,
+as supplied by the author on September 30, 2026.
 The full list also includes three APPFL-related papers, including biomedical work
 at Argonne. Biography details were supplied by the author. Biography links to
 full-list-only papers automatically reveal those entries.
